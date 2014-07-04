@@ -1,0 +1,14 @@
+{
+  "packages": {
+    "bootstrap-3": {},
+    "iron-router": {},
+    "jquery-ui": {},
+    "spin": {},
+    "collection2": {},
+    "moment": {},
+    "percolatestudio-migrations": {},
+    "accounts-ui-bootstrap-3-blaze": {},
+    "font-awesome": {},
+    "lodash": {}
+  }
+}

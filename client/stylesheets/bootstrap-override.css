@@ -1,0 +1,27 @@
+body {
+  padding-top: 50px;
+}
+
+.btn-toolbar {
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+form {
+  margin: 0 0 20px;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.list-group-item-info {
+  color: #31708F;
+  background-color: #D9EDF7;
+}
