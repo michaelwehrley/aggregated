@@ -1,4 +1,12 @@
 <template name="home">
-  <h1>AggregatEd</h1>
-  
+  <h1>Welcome</h1>
+  <p class="lead">
+    This Weeks CCRS: something here.
+  </p>
+  <h3>Previous Winners</h3>
+  <div class="list-group">
+    {{#each objectives}}
+      <a href="{{pathFor 'objective'}}">{{title}}</a>
+    {{/each}}
+  </div>
 </template>
