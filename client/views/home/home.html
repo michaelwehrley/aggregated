@@ -1,9 +1,24 @@
 <template name="home">
   <h1>Welcome</h1>
+  <p>My goal is to aggregate the world's lessons and teaching resources with data to allow for the collaboration and development of resources that can teach anyone - adult or child, white or black, deaf, bline or even in prison.</p>
+  <h3>This Week's Focus</h3>
   <p class="lead">
     This Weeks CCRS: something here.
   </p>
-  <h3>Previous Winners</h3>
+  <div class="media-group">
+    {{#each embeds}}
+      <!-- Like Stackoverflow -->
+      <!-- arrow up -->
+      <!-- position -->
+      <!-- arrow down -->
+      <div>
+        <!-- embed -->
+        <!-- image takes user to emebed show page -->
+        <!-- caption -->
+      </div>
+    {{/each}}
+  </div>
+  <h3>Previous Objectives</h3>
   <div class="list-group">
     {{#each objectives}}
       <a href="{{pathFor 'objective'}}">{{title}}</a>
