@@ -2,7 +2,7 @@ Router.configure
   layoutTemplate: "layout"
   loadingTemplate: "loading"
   waitOn: ->
-    #
+    [ Meteor.subscribe "objectives"]
 
 requireLogin = (pause) ->
   unless Meteor.user()
@@ -13,7 +13,7 @@ requireLogin = (pause) ->
     pause()
 
 # Router.before requireLogin,
-#   only: "home"
+#   only: "objectiveNew"
 
 Router.map ->
   @route "home", # objectivesIndex? - share template?
@@ -26,15 +26,19 @@ Router.map ->
     # RAILSCAST look - shows all objectives with the winner as the primary image and a link to objecctive show page
 
   @route "objectiveNew",
-    path: "/objectives/new"
     # Only for me & authorized users
+    path: "/objectives/new"
 
   @route "objectiveEdit",
-    path: "/objectives/:id/edit"
     # Only for me & authorized users
+    path: "/objectives/:_id/edit"
+    data: ->
+      Objectives.findOne(@params._id)
 
   @route "objectiveShow",
-    path: "/objectives/:id"
+    path: "/objectives/:_id"
+    data: ->
+      Objectives.findOne(@params._id)
     # Shows list of embeds in RANDOM order BEFORE completion date
     # Shows all embeds that you can rank
 
@@ -42,6 +46,6 @@ Router.map ->
     # formula that takes into account volume, but also order consitency
 
   @route "embeds",
-    path: "/embeds/:id"
+    path: "/embeds/:_id"
     # Displays Embed, creator, objective and ranking data
     # Comments for each embed

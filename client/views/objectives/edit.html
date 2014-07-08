@@ -1,0 +1,8 @@
+<template name="objectiveEdit">
+  <h1>Edit Objective <small>{{title}}</small></h1>
+  <form role="form">
+    {{> _objectiveForm}}
+    <input class="btn btn-primary" name="commit" type="submit" value="Update">
+    <a class="btn btn-default" href="{{ pathFor 'home' }}">Cancel</a>
+  </form>
+</template>

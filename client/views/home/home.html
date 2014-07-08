@@ -19,9 +19,12 @@
     {{/each}}
   </div>
   <h3>Previous Objectives</h3>
+  <div class="btn-toolbar">
+    <a class="btn btn-default" href="{{ pathFor 'objectiveNew' }}">Create Objective</a>
+  </div>
   <div class="list-group">
     {{#each objectives}}
-      <a href="{{pathFor 'objective'}}">{{title}}</a>
+      <a class="list-group-item" href="{{ pathFor 'objectiveShow' }}">{{title}}</a>
     {{/each}}
   </div>
 </template>
